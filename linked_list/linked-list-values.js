@@ -11,3 +11,10 @@ const linkedListValues = (head) => {
   }
   return arr;
 };
+
+// recursive approach
+const linkedListValues = (head, arr=[]) => {
+  if (head === null) return arr;
+  arr.push(head.val);
+  return linkedListValues(head, arr);
+};
