@@ -16,5 +16,5 @@ const linkedListValues = (head) => {
 const linkedListValues = (head, arr=[]) => {
   if (head === null) return arr;
   arr.push(head.val);
-  return linkedListValues(head, arr);
+  return linkedListValues(head.next, arr);
 };
