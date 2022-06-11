@@ -5,7 +5,7 @@
 const depthFirstValues = (root) => {
   let visited = [];
   let stack = [root];
-  while (stack.length >= 0) {
+  while (stack.length > 0) {
     const curr = stack.pop();
     if (curr === null) continue;
     visited.push(curr.val);
