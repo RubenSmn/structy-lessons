@@ -14,3 +14,7 @@ const breadthFirstValues = (root) => {
   }
   return values;
 };
+
+// breadth first should only really be executed in a iterative way
+// this because it needs a queue
+// the recursive approach uses kinda a stack under the hood
