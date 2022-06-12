@@ -4,22 +4,22 @@
 
 // iterative approach
 // breadth first
-const treeSum = (root) => {
-  let sum = 0;
-  let queue = [root];
+const treeIncludes = (root, target) => {
+  const queue = [root];
   while (queue.length > 0) {
     const curr = queue.shift();
     if (curr === null) continue;
+    if (curr.val === target) return true;
     queue.push(curr.left);
     queue.push(curr.right);
-    sum += curr.val;
   }
-  return sum;
+  return false;
 };
 
 // recursive approach
 // depth first
-const treeSum = (root) => {
-  if (root === null) return 0;
-  return root.val + treeSum(root.left) + treeSum(root.right);
+const treeIncludes = (root, target) => {
+  if (root === null) return false;
+  if (root.val === target) return true;
+  return treeIncludes(root.left, target) || treeIncludes(root.right, target);
 };
