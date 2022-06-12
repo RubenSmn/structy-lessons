@@ -1,5 +1,5 @@
 // problem from
-// https://www.structy.net/problems/sum-tree
+// https://www.structy.net/problems/tree-sum
 
 // iterative approach
 // breadth first
