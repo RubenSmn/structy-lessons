@@ -1,8 +1,8 @@
 // problem from
-// https://www.structy.net/problems/breath-first-values
+// https://www.structy.net/problems/breadth-first-values
 
 // iterative approach
-const breathFirstValues = (root) => {
+const breadthFirstValues = (root) => {
   let queue = [root];
   let values = [];
   while (queue.length > 0) {
