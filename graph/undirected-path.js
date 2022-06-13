@@ -2,7 +2,7 @@
 // https://www.structy.net/problems/undirected-path
 
 // depth first
-const hasPath = (edges, nodeA, nodeB) => {
+const undirectedPath = (edges, nodeA, nodeB) => {
   const graph = buildGraph(edges);
   const visited = new Set();
   const stack = [nodeA];
@@ -20,7 +20,7 @@ const hasPath = (edges, nodeA, nodeB) => {
 };
 
 // breadth first
-const hasPath = (edges, nodeA, nodeB) => {
+const undirectedPath = (edges, nodeA, nodeB) => {
   const graph = buildGraph(edges);
   const visited = new Set();
   const queue = [nodeA];
