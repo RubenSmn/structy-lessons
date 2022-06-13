@@ -19,6 +19,25 @@ const hasPath = (edges, nodeA, nodeB) => {
   return false;
 };
 
+// breadth first
+const hasPath = (edges, nodeA, nodeB) => {
+  const graph = buildGraph(edges);
+  const visited = new Set();
+  const queue = [nodeA];
+  while (queue.length > 0) {
+    const curr = queue.shift();
+    if (visited.has(curr)) continue;
+    visited.add(curr);
+    if (curr === null) continue;
+    if (curr === nodeB) return true;
+    for (let neighbor of graph[curr]) {
+      queue.push(neighbor);
+    }
+  }
+  return false;
+};
+
+// build graph
 const buildGraph = (edges) => {
   const graph = {};
   for (let nodes of edges) {
