@@ -1,5 +1,5 @@
 // problem from
-// https://www.structy.net/problems/max-root-to-leaf-path-sum
+// https://www.structy.net/problems/has-path
 
 // depth first
 const hasPath = (graph, src, dst) => {
