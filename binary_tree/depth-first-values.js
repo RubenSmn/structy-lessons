@@ -3,14 +3,14 @@
 
 // iterative approach
 const depthFirstValues = (root) => {
+  if (root === null) return [];
   let visited = [];
   let stack = [root];
   while (stack.length > 0) {
     const curr = stack.pop();
-    if (curr === null) continue;
     visited.push(curr.val);
-    stack.push(curr.right);
-    stack.push(curr.left);
+    if (curr.right !== null) stack.push(curr.right);
+    if (curr.left !== null) stack.push(curr.left);
   }
   return visited;
 };
