@@ -1,17 +1,17 @@
-
 // problem from
 // https://www.structy.net/problems/tree-includes
 
 // iterative approach
 // breadth first
 const treeIncludes = (root, target) => {
+  if (root === null) return false;
+  if (root.val === target) return true;
   const queue = [root];
   while (queue.length > 0) {
     const curr = queue.shift();
-    if (curr === null) continue;
     if (curr.val === target) return true;
-    queue.push(curr.left);
-    queue.push(curr.right);
+    if (curr.left !== null) queue.push(curr.left);
+    if (curr.right !== null) queue.push(curr.right);
   }
   return false;
 };
